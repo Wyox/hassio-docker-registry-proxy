@@ -10,7 +10,7 @@
     "init": false,
     "timeout": 20,
     "ports": {
-      "3128/tcp": null
+      "3128/tcp": 3128
     },
     "options": {
     }
