@@ -22,7 +22,7 @@ CN_CA=${CN_CA:0:64}
 CN_IA=${CN_IA:0:64}
 CN_WEB=${CN_WEB:0:64}
 
-mkdir -p /certs /data/ca
+mkdir -p /data/certs /data/ca
 cd /data/ca
 
 CA_KEY_FILE=${CA_KEY_FILE:-/data/ca/ca.key}
@@ -60,7 +60,7 @@ EOF
 
 fi
 
-cd /certs
+cd /data/certs
 
 logInfo "Generate IA key"
 openssl genrsa -des3 -passout pass:foobar -out ia.key 4096 &> /dev/null
