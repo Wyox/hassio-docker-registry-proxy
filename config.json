@@ -9,24 +9,9 @@
     "boot": "auto",
     "init": false,
     "timeout": 20,
-    "services": ["mysql:provide"],
     "ports": {
       "3128/tcp": null
     },
     "options": {
-      "databases": ["homeassistant"],
-      "logins": [{ "username": "homeassistant", "password": null }],
-      "rights": [
-        {
-          "username": "homeassistant",
-          "database": "homeassistant"
-        }
-      ]
-    },
-    "schema": {
-      "databases": ["str"],
-      "logins": [{ "username": "str", "password": "password" }],
-      "rights": [{ "username": "str", "database": "str" }]
-    },
-    "image": "homeassistant/{arch}-addon-mariadb"
+    }
   }
