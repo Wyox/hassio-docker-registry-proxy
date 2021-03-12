@@ -45,7 +45,7 @@ done
 
 # Clean the list and generate certificates.
 export ALLDOMAINS=${ALLDOMAINS:1} # remove the first comma and export
-/create_ca_cert.sh # This uses ALLDOMAINS to generate the certificates.
+/create_ca_cert-2.sh # This uses ALLDOMAINS to generate the certificates.
 
 # Target host interception. Empty by default. Used to intercept outgoing requests
 # from the proxy to the registries.
@@ -177,7 +177,7 @@ if [[ "a${DEBUG}" == "atrue" ]]; then
           --set termlog_verbosity=error --set stream_large_bodies=128k --web-port 8081 \
           --set keep_host_header=true --set ssl_insecure=true \
           --mode reverse:https://127.0.0.1:444 --listen-host 0.0.0.0 \
-          --listen-port 443 --certs /certs/fullchain_with_key.pem  &
+          --listen-port 443 --certs /data/certs/fullchain_with_key.pem  &
   echo "Access mitmweb via http://127.0.0.1:8081/ "
 fi
 
@@ -196,7 +196,7 @@ if [[ "a${DEBUG_HUB}" == "atrue" ]]; then
           --set termlog_verbosity=error --set stream_large_bodies=128k --web-port 8082 \
           --set keep_host_header=false --set ssl_insecure=true \
           --mode reverse:https://registry-1.docker.io --listen-host 0.0.0.0 \
-          --listen-port 445 --certs /certs/fullchain_with_key.pem  &
+          --listen-port 445 --certs /data/certs/fullchain_with_key.pem  &
 
   echo "Warning, DockerHub outgoing debugging disables upstream SSL verification for all upstreams."  >&2
   VERIFY_SSL=false
