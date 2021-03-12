@@ -45,7 +45,7 @@ done
 
 # Clean the list and generate certificates.
 export ALLDOMAINS=${ALLDOMAINS:1} # remove the first comma and export
-/create_ca_cert-2.sh # This uses ALLDOMAINS to generate the certificates.
+/create_ca_cert.sh # This uses ALLDOMAINS to generate the certificates.
 
 # Target host interception. Empty by default. Used to intercept outgoing requests
 # from the proxy to the registries.
@@ -239,6 +239,8 @@ EOD
 echo -e "\nTimeout configs: ---"
 cat /etc/nginx/nginx.timeouts.config.conf
 echo -e "---\n"
+
+ls /etc/ssl/certs
 
 # Upstream SSL verification.
 echo "" > /etc/nginx/docker.verify.ssl.conf
