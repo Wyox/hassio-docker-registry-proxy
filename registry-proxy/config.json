@@ -1,6 +1,6 @@
 {
     "name": "Docker Registry Proxy",
-    "version": "0.2.1",
+    "version": "0.3.0",
     "slug": "registry-proxy",
     "description": "A Docker Registry Proxy",
     "url": "https://github.com/Wyox/hassio-docker-registry-proxy",
