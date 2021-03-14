@@ -21,7 +21,7 @@
     "schema": {
       "cache_max_size": "str",
       "enable_manifest_cache": "bool",
-      "auth_registies": "str"
+      "auth_registries": "str"
     }
   }
 

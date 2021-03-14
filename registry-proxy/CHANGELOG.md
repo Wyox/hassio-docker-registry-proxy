@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.2.1
+
+- Fix typo in config.json
 
 ## 0.2.0 
 
