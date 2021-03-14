@@ -14,5 +14,14 @@
       "3128/tcp": 3128
     },
     "options": {
+      "cache_max_size": "32g",
+      "enable_manifest_cache": "false",
+      "auth_registries": "some.authenticated.registry:oneuser:onepassword another.registry:user:password"
+    },
+    "schema": {
+      "cache_max_size": "str",
+      "enable_manifest_cache": "bool",
+      "auth_registies": "str"
     }
   }
+

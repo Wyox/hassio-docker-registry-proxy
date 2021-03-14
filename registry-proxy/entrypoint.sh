@@ -1,5 +1,14 @@
 #! /bin/bash
 
+# Make sure we load our config
+CONFIG_PATH=/data/options.json
+
+
+export CACHE_MAX_SIZE=$(jq -r '.cache_max_size' $CONFIG_PATH)
+export ENABLE_MANIFEST_CACHE=$(jq '.enable_manifest_cache' $CONFIG_PATH)
+export AUTH_REGISTRIES=$(jq -r '.auth_registries' $CONFIG_PATH)
+
+
 set -Eeuo pipefail
 trap "echo TRAPed signal" HUP INT QUIT TERM
 
@@ -244,6 +253,7 @@ ls /etc/ssl/certs
 
 # Upstream SSL verification.
 echo "" > /etc/nginx/docker.verify.ssl.conf
+
 if [[ "a${VERIFY_SSL}" == "atrue" ]]; then
     cat << EOD > /etc/nginx/docker.verify.ssl.conf
     # We actually wanna be secure and avoid mitm attacks.

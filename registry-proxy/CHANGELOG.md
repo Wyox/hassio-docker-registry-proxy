@@ -1,6 +1,10 @@
 # Changelog
 
 
+## 0.2.0 
+
+- Add a couple of configuration settings
+
 ## 0.1.0
 
 - Remove docker_proxy_cache from being included snapshots (certificates are still saved)
