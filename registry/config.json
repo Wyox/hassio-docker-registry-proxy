@@ -1,0 +1,22 @@
+{
+    "name": "Docker Registry Proxy",
+    "version": "0.3.0",
+    "slug": "registry-proxy",
+    "description": "A Docker Registry Proxy",
+    "url": "https://github.com/Wyox/hassio-docker-registry-proxy",
+    "arch": ["aarch64", "amd64", "i386"],
+    "snapshot_exclude": ["/data/docker_mirror_cache"],
+    "startup": "system",
+    "boot": "auto",
+    "init": false,
+    "timeout": 20,
+    "ports": {
+      "3000/tcp": 3000
+    },
+    "options": {
+      "REGISTRY_PROXY_REMOTEURL": "https://registry-1.docker.io",
+    },
+    "schema": {
+    }
+  }
+
