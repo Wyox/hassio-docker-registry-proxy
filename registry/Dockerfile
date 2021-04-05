@@ -5,10 +5,9 @@ FROM $BUILD_FROM
 ENV REGISTRY_PROXY_REMOTEURL="https://registry-1.docker.io"
 ENV REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY="/data/registry"
 
-COPY test.sh /tester.sh
+COPY docker-entrypoint.sh /entrypoint.sh
 COPY config.yml /etc/docker/registry/config.yml
-RUN chmod +x /tester.sh
+RUN chmod +x /entrypoint.sh
 
-ENTRYPOINT []
-# CMD ["/etc/docker/registry/config.yml"]
-CMD ["/tester.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
+CMD ["/etc/docker/registry/config.yml"]
