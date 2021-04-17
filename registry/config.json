@@ -1,6 +1,6 @@
 {
     "name": "Docker Pull Through Cache Proxy",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "slug": "docker-pull-through-registry",
     "description": "A Docker Registry Pull Through Cache Proxy",
     "url": "https://github.com/Wyox/hassio-docker-registry-proxy",
