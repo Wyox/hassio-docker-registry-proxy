@@ -2,8 +2,26 @@
 
 echo Starting Docker Registry
 
-ls
-ls /data
+# Replacing variables in YAML with env variables
+REPLACER_USERNAME="s/\$USERNAME/$USERNAME/g"
+
+apk add --no-cache jq
+
+set -e
+
+CONFIG_PATH=/data/options.json
+
+USERNAME=$(jq --raw-output '.username // empty' $CONFIG_PATH)
+PASSWORD=$(jq --raw-output '.password // empty' $CONFIG_PATH)
+
+
+sed -i -e "s/\$USERNAME/$USERNAME/g" /etc/docker/registry/config.yml
+sed -i -e "s/\$PASSWORD/$PASSWORD/g" /etc/docker/registry/config.yml
+
+
+cat /etc/docker/registry/config.yml
+
+
 
 set -e
 

@@ -14,9 +14,13 @@
       "5000/tcp": 5000
     },
     "options": {
-      "REGISTRY_PROXY_REMOTEURL": "https://registry-1.docker.io"
+      "REGISTRY_PROXY_REMOTEURL": "https://registry-1.docker.io",
+      "username": "DockerUsername",
+      "password": ""
     },
     "schema": {
+      "username": "str(1,)",
+      "password": "password"
     }
   }
 
