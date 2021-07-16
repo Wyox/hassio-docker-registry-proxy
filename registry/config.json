@@ -20,7 +20,7 @@
     },
     "schema": {
       "username": "str(1,)",
-      "password": "passwordS"
+      "password": "password"
     }
   }
 
