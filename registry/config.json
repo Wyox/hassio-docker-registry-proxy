@@ -1,6 +1,6 @@
 {
   "name": "Docker Pull Through Cache Proxy",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "slug": "docker-pull-through-registry",
   "description": "A Docker Registry Pull Through Cache Proxy",
   "url": "https://github.com/Wyox/hassio-docker-registry-proxy",
@@ -14,12 +14,12 @@
     "5000/tcp": 5000
   },
   "options": {
-    "username": "DockerUsername",
+    "Doc": "",
     "password": ""
   },
   "schema": {
-    "username": "str(1,100)",
-    "password": "str(1,100)"
+    "username": "str",
+    "password": "str"
   }
 }
 
