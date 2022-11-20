@@ -1,5 +1,5 @@
 ARG BUILD_FROM
-FROM registry:2
+FROM registry:2.8.1
 
 
 ENV REGISTRY_PROXY_REMOTEURL="https://registry-1.docker.io"

@@ -1,5 +1,0 @@
-{
-    "cache_max_size": "32g",
-    "enable_manifest_cache": "false",
-    "auth_registries": "some.authenticated.registry:oneuser:onepassword another.registry:user:password"
-}
