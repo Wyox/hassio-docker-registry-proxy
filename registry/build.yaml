@@ -1,0 +1,6 @@
+build_from:
+  armhf: docker/registry:2.8.3
+  armv7: docker/registry:2.8.3
+  aarch64: docker/registry:2.8.3
+  amd64: docker/registry:2.8.3
+  i386: docker/registry:2.8.3

@@ -17,6 +17,7 @@ proxy:
   remoteurl: https://registry-1.docker.io
   username: $USERNAME
   password: $PASSWORD
+  ttl: 168h # 7 days of TTL
 health:
   storagedriver:
     enabled: true

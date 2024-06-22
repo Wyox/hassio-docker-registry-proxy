@@ -1,7 +1,6 @@
 #!/bin/sh
 
 echo Starting Docker Registry
-
 # Replacing variables in YAML with env variables
 REPLACER_USERNAME="s/\$USERNAME/$USERNAME/g"
 
@@ -20,8 +19,6 @@ sed -i -e "s/\$PASSWORD/$PASSWORD/g" /etc/docker/registry/config.yml
 
 
 cat /etc/docker/registry/config.yml
-
-
 
 set -e
 

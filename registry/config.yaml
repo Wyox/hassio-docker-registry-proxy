@@ -1,0 +1,25 @@
+name: "Docker Pull Through Cache Proxy"
+version: "0.3.6"
+slug: "docker-pull-through-registry"
+description: "A Docker Registry Pull Through Cache Proxy"
+url: "https://github.com/Wyox/hassio-docker-registry-proxy"
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+startup: "system"
+boot: auto
+ports:
+  5000/tcp: 5000
+ports_description:
+  - 5000/tcp: "To do http requests to the registry"
+init: false
+timeout: 20
+options:
+  username: ""
+  password: ""
+schema:
+  username: str
+  password: password
