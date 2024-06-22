@@ -9,7 +9,3 @@
 **v0.3.5**
 
 - Upgrade docker registry image to `2.8.2`
-
-**v0.3.5**
-
-- Upgrade docker registry image to `2.8.2`
