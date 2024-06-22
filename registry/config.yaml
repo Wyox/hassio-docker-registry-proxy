@@ -14,7 +14,7 @@ boot: auto
 ports:
   5000/tcp: 5000
 ports_description:
-  - 5000/tcp: "To do http requests to the registry"
+  5000/tcp: "To do http requests to the registry"
 init: false
 timeout: 20
 options:
