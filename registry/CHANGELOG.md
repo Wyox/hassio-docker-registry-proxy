@@ -1,5 +1,8 @@
 # Changelog
 
+**v0.3.7**
+- Registry cache data is no longer stored in the backup
+
 **v0.3.6**
 
 - Upgrade docker registry image to `2.8.3`
