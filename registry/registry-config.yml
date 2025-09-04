@@ -9,10 +9,20 @@ storage:
     rootdirectory: /data/registry
   delete:
     enabled: true
+  maintenance:
+    uploadpurging:
+      enabled: true
+      age: 168h
+      interval: 24h
+      dryrun: false
+    readonly:
+      enabled: false
 http:
   addr: :5000
   headers:
     X-Content-Type-Options: [nosniff]
+  h2c:
+    enabled: true
 proxy:
   remoteurl: https://registry-1.docker.io
   username: $USERNAME

@@ -4,8 +4,6 @@ echo Starting Docker Registry
 # Replacing variables in YAML with env variables
 REPLACER_USERNAME="s/\$USERNAME/$USERNAME/g"
 
-apk add --no-cache jq
-
 set -e
 
 CONFIG_PATH=/data/options.json
